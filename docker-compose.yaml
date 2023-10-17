@@ -18,14 +18,14 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_LOG_DIRS: /var/lib/kafka/data
 
-  golang-producer:
-    build:
-      context: ./producer  # Path to your producer Golang code
-    depends_on:
-      - kafka
+#  golang-producer:
+#    build:
+#      context: ./producer  # Path to your producer Golang code
+#    depends_on:
+#      - kafka
 
-  golang-consumer:
-    build:
-      context: ./consumer  # Path to your consumer Golang code
-    depends_on:
-      - kafka
+#  golang-consumer:
+#    build:
+#      context: ./consumer  # Path to your consumer Golang code
+#    depends_on:
+#      - kafka
